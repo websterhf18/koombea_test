@@ -34,7 +34,7 @@
                         @endforeach
                         @else
                             <tr>
-                                <td colspan="3">No hay registros</td>
+                                <td colspan="8">No hay registros</td>
                             </tr>
                         @endif
                     </table>
