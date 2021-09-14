@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contactos', 'ContactsController@index')->name('contactos');
+Route::get('/archivos', 'ArchivosController@index')->name('archivos');
+Route::post('/import_archivo', 'ArchivosController@import')->name('import_archivo');
+Route::post('/import_contactos', 'ContactsController@import')->name('import_contactos');
