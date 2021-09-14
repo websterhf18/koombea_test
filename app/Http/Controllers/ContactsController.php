@@ -49,7 +49,7 @@ class ContactsController extends Controller
             }
             $parseCC = ContactService::parse_cc_number($row[4]);
             $arrayFields['credit_card'] = ContactService::get_four_last($parseCC);
-            $arrayFields['franchise'] = ContactService::get_cc_company($parseCC, true);
+            $arrayFields['franchise'] = ContactService::get_cc_company($parseCC, false);
             Contacts::create($arrayFields);
         }
         $data->status = 'Terminated';
