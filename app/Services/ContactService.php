@@ -9,8 +9,8 @@ class ContactService {
     public static function get_cc_company($cc)
     {
         $card = CreditCard::validCreditCard($cc);
-        if($card['valid']){
-            return $card['type'];
+        if($card->valid){
+            return $card->type;
         }else{
             return 'No valido';
         }
